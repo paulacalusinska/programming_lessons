@@ -1,16 +1,15 @@
 # z listy imion wypisz jedynie unikalne imiona
 # (lista osób biorących udział w szkoleniach – wybierz wszystkich którzy brali udział chociażby w jednym)
 
-def list_only_unique_names(list1):
-    list_of_unique_names = []
-    for names in list_of_names:
-        if names in list_of_trainees:
-            list_of_unique_names.append(names)
-    print(list_of_unique_names)
+def list_only_unique_names(all_names):
+    unique_names = set()
+    for names in all_names:
+        unique_names.add(names)
+    return unique_names
 
-list_of_names = ['Paula', 'Ania', 'Krzysiek', 'Szymon']
-list_of_trainees = ['Ania', 'Paula']
-list_only_unique_names(list_of_names)
+
+list_of_names = ['Paula', 'Ania', 'Krzysiek', 'Szymon', 'Ania']
+print(list_only_unique_names(list_of_names))
 
 
 # mając dwa słowa sprawdź czy są one annagramami
